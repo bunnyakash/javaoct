@@ -16,16 +16,4 @@ public class overriding {
     return ch.getsavings(sal)+"";
    
 }
-
-
-
-
-@Produces("text/plain")
-@GET
-@Path("{bjh}")
-	public String getint(@PathParam("bjh")int x) { 
-    child1 ch1=new child1();
-    return ch1.getin(x)+"";
-   
-}
 }
