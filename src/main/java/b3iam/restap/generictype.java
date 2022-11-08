@@ -5,9 +5,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-public class generictype<T> {
-	T x;
-	T ar[];
+public class generictype<A> {
+	A x;
+	A ar[];
 	public String getType() {
 		if(x instanceof Integer)
 			return "int";
@@ -19,11 +19,11 @@ public class generictype<T> {
 			return "---";
 	}
 	
-	public void createArray(T... values) {
+	public void createArray(A... values) {
 		ar=values;
 	}
 	
-	public T[] readArray() {
+	public A[] readArray() {
 		return ar;
 	}
 	@GET
