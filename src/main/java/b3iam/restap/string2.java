@@ -59,7 +59,8 @@ public String replace(@PathParam("s")String s,@PathParam("s1")String s1,@PathPar
 public String getindexof(@PathParam("string")String name) {
 	String in="abcdefghijklmnopqrstuvwxyz";
     String inds="";
-    int count=0;
+    @SuppressWarnings("unused")
+	int count=0;
     for(int i=0;i<in.length();i++) {
         inds+=name.indexOf(in.charAt(i))+"";
     }

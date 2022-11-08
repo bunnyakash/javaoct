@@ -19,7 +19,7 @@ public class constructors {
 public  int square() {
 	return n*n;
 }
-@Produces("text/plain")
+@Produces(MediaType.TEXT_HTML)
 @GET
 @Path("square/{n}")
 public String getsquare(@PathParam("n")int n){

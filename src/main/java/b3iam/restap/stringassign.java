@@ -28,7 +28,8 @@ return s1;
     @GET
     @Path("wc/{string}")
     public String getWC(@PathParam("string")String c) {
-        int length=c.length();
+        @SuppressWarnings("unused")
+		int length=c.length();
         int count =1;
          for (int i = 0; i < c.length() - 1; i++) {
                if ((c.charAt(i) == ' ') && (c.charAt(i + 1) != ' ')) {
