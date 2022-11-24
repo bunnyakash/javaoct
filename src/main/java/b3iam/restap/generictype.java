@@ -5,13 +5,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+@Path("lv")
 public class generictype<A> {
 	A x;
 	A ar[];
 	public String getType() {
 		if(x instanceof Integer)
 			return "int";
-		else if(x instanceof Float)
+		else if(x instanceof Float||x instanceof Double)
 			return "decimal number";
 		else if(x instanceof String)
 			return "text";
@@ -19,7 +20,7 @@ public class generictype<A> {
 			return "---";
 	}
 	
-	public void createArray(A... values) {
+	public void createArray(@SuppressWarnings("unchecked") A... values) {
 		ar=values;
 	}
 	
@@ -43,8 +44,8 @@ public class generictype<A> {
 	@Path("type")
 	@Produces(MediaType.TEXT_HTML)
 	public String type() {
-		generictype<Float> inst=new generictype<Float>();
-		//inst.x=0.0f;
+		generictype<Object> inst=new generictype<Object>();
+		inst.x=123.23f;
 		return inst.getType();
 	}
 }

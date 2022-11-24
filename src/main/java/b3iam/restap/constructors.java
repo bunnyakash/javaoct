@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 public class constructors {
 
 	int n;
-	public constructors(){
+	public constructors(){ 
 		n=0;
 	}
 		public constructors(int n){
@@ -27,3 +27,4 @@ constructors num2=new constructors(n+10);
 return num2.square()+"";
 }
 }
+

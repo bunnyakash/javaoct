@@ -7,7 +7,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("xh")
-public class wrapperclass {
+public class wrapperclass<intvalue> {
     @Produces(MediaType.TEXT_HTML)
     @GET
     @Path("{cu}")
@@ -18,8 +18,21 @@ public class wrapperclass {
         
         }
 
+   @Produces(MediaType.TEXT_HTML)
+    @GET
+    @Path("prim/{y1}")
+    public String wrap1(@PathParam("y1")Integer y) {
+    Integer yob=y.intValue();
+    return yob.toBinaryString(y);
+    }
 
-
+   @Produces(MediaType.TEXT_HTML)
+   @GET
+   @Path("pars/{z}")
+public String wrap2(@PathParam("z")String z) {
+	int zob=Integer.parseInt("z");
+	return zob+"";
+}
 }
 
 

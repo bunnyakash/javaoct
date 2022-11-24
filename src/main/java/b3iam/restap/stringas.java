@@ -18,17 +18,22 @@ public class stringas {
 @GET
 @Path("lsch/{string}")
 public String getlastchar(@PathParam("string")String a) {
-  a=a+" ";
-  String b =" ";
-	for(int i=0;i<a.length();i++) {
-		if(a.charAt(i) == ' ') {
+	
+	String ar[]=a.split(" ");
+String res="";
+String r="";
+	for(String s:ar) {
+		String S1=s.substring(0,1).toUpperCase();
+		String S2=s.substring(1);
+		res+=s.charAt(s.length()-1);
+		r+=S1+S2;
 		
-	b+=a.charAt(i-1)+' '+"";
-		}
 	}
-	return b;
+	return res+"<br>"+r;
+
 }
-}	
+}
+
 	
         
    
