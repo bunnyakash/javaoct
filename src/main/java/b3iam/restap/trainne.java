@@ -2,10 +2,12 @@ package b3iam.restap;
 
 import java.sql.DriverManager;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 
 import java.sql.Connection;
@@ -125,9 +127,29 @@ public String connectToDatabase() {
         return e.getMessage();
     }
 }
+
+@GET
+@Path("birth")
+@Produces(MediaType.TEXT_HTML)
+    public String wish(@Context HttpServletRequest rq) {
+    	String name=rq.getParameter("username");
+    	return "Happy Birthday to: "+name;
+    }
+    
+    
+
+@GET
+@Path("website")
+@Produces(MediaType.TEXT_HTML)
+    public String website(@Context HttpServletRequest rq) {
+    	String web=rq.getParameter("website");
+    	String str=" <a href=\"https://www.w3schools.com/\">Visit W3Schools.com!</a> ";
+  String str2="<a href=\"https://www.geeksforgeeks.org/\">visit geeksforgeeks.com</a>";
+    	return str+"<br>"+str2;
+    }
+    
     
 }
-
 
 
 

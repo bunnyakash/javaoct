@@ -1,3 +1,4 @@
+package b3iam.restap;
 /*package b3iam.restap;
 
 import javax.ws.rs.GET;

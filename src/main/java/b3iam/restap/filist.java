@@ -20,7 +20,7 @@ public class filist {
 	public String readFileScan(@PathParam("fileName")String fileName) {
 		List<String> lines=new ArrayList<>();
 		try {
-			Scanner sc=new Scanner(new File("D:\\akashworkspace\\restap\\files"+fileName));
+			Scanner sc=new Scanner(new File("D:\\akashworkspace\\restap\\files\\"+fileName));
 			while(sc.hasNextLine())
 				lines.add(sc.nextLine());
 			return lines.toString();
