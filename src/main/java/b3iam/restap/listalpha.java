@@ -13,10 +13,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 @Path("arrlis")
 public class listalpha {
-	public List<String> addvalues(String...name){
+	/*public List<String> addvalues(String...name){
 	List<String> list=Arrays.asList(name);
 	return list;
-	}
+	}*/
 
 	@GET
 	@Produces(MediaType.TEXT_HTML)

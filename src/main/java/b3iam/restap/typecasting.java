@@ -15,7 +15,6 @@ public class typecasting {
 public String cast(@PathParam("y")float b) {
 	  int a=(int)b ;
 	return a+"";
-	
-}
 
+}
 }

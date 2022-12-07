@@ -3,6 +3,7 @@ package b3iam.restap;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Scanner;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -62,5 +63,6 @@ public String copydata(@PathParam("file1")String fname,@PathParam("file2")String
 	}
 }
 }
-		
+
+
 	

@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 @Path("dup")
 public class listduplicates {
 	
-public static <Integer> ArrayList<Integer> removeDuplicates(ArrayList<Integer> list){
+public static <Integer> ArrayList<Integer> removeDuplicates(ArrayList<Integer> list) {
 	ArrayList<Integer> newList=new ArrayList<Integer>();
 	for(Integer I:list) {
 		if(!newList.contains(I)) {
@@ -31,6 +31,7 @@ ArrayList<Integer> list=new ArrayList<>(Arrays.asList(1,10,8,7,3,3,1,67,35,67,10
 	ArrayList<Integer> newlist=removeDuplicates(list);
 	return list+"<br>"+newlist;
 }
+
 
 
 }

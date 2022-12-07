@@ -1,6 +1,5 @@
 package b3iam.restap;
 
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -158,6 +157,51 @@ public String insert2(@PathParam("id")int id,@PathParam("name")String name,@Path
 		return "data saved";
 	}
 }
-
+@GET
+@Path("create_table")
+@Produces(MediaType.TEXT_HTML)
+public void create() {
+String sql="create table names(name varchar(10),number int)";
+PreparedStatement ps;
+try {
+	ps = c.prepareStatement(sql);
+	ps.execute();
+} catch (Exception e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
 }
+}
+@GET
+@Path("insert_names/{number}/{name}")
+@Produces(MediaType.TEXT_HTML)
+public void insert12(@PathParam("number")int number,@PathParam("name")String name){
+
+	String sql="insert into names values(?,?)";
+	PreparedStatement ps;
+	try {
+		ps=c.prepareStatement(sql);
+		ps.setInt(1, number);
+		ps.setString(2, name);
+	
+			ps.execute();
+		
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+}
+@GET
+@Path("ins_names/{number}/{name}")
+@Produces(MediaType.TEXT_HTML)
+public String insert21(@PathParam("number")int number,@PathParam("name")String name) throws SQLException {
+	connectingdatabse db=new connectingdatabse();
+	if(db.c==null)
+		return "not connected";
+	else {
+		db.insert12(number,name);
+		return "data saved";
+	}
+}
+}
+
     

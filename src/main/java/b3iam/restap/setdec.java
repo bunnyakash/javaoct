@@ -84,7 +84,7 @@ public class setdec{
 		Map<String,Object> mem1=new LinkedHashMap<>();
 		Map<String,Object> mem2=new LinkedHashMap<>();
 		Map<String,Object> mem3=new LinkedHashMap<>();
-		
+		Map<String,Object> mem4=new LinkedHashMap<>();
 		head.put("name", "ravi");
 		head.put("age", 65);
 		head.put("rel", "self");
@@ -101,10 +101,15 @@ public class setdec{
 		mem3.put("age", 19);
 		mem3.put("rel", "daughter");
 		
+		mem4.put("name", "adarsh");
+		mem4.put("age", 21);
+		mem4.put("rel", "son");
+		
 		family.put("head", head);
 		family.put("mem1", mem1);
 		family.put("mem2", mem2);
 		family.put("mem3", mem3);
+		family.put("mem4", mem4);
 		
 		String s="";
 		for(Map.Entry<String, Map<String,Object>> entry:family.entrySet())

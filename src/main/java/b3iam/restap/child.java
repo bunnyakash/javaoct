@@ -7,3 +7,4 @@ public class child extends parent {
 		return ps+"<br>"+sal*15/100;
 	}
 }
+

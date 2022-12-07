@@ -147,9 +147,20 @@ public String connectToDatabase() {
   String str2="<a href=\"https://www.geeksforgeeks.org/\">visit geeksforgeeks.com</a>";
     	return str+"<br>"+str2;
     }
-    
-    
+@GET
+@Path("arith/{a},{b}")
+@Produces(MediaType.TEXT_HTML)
+public String doIt(@PathParam("a")int a,@PathParam("b")int b) {
+	arith add=(x,y)->{
+		return x+y;
+	};
+	String res=add.dooperation(a, b)+"";
+	return res;
 }
+}
+ 
+    
+
 
 
 

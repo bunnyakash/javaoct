@@ -1,12 +1,12 @@
-package b3iam.restap;
 /*package b3iam.restap;
+
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
-/*@Path("pri")
+@Path("priv")
 public class privatevar {
 int id;
 String name;
@@ -30,8 +30,8 @@ public void setsal(double sal) {
 }
 @GET
 @Produces(MediaType.TEXT_HTML)
-@Path("sala/{sal}")
-public String getprivatevar(@PathParam("sal")String sal) {
+@Path("sala/{salll}")
+public String getprivatevar(@PathParam("salll")String sal) {
 	privatevar pv=new privatevar();
 	return pv.getprivatevar(sal)+"<br>";
 }

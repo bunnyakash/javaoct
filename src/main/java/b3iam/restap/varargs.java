@@ -6,6 +6,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
+
+@Path("varar")
 public class varargs {
 	public int add(String... x) {
         int sum=0;
